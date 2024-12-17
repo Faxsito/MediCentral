@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página del Médico</title>
+    <link rel="stylesheet" href="medico.css"> <!-- Asegúrate de que este archivo esté enlazado -->
+</head>
+
+<body>
+    <!-- Menú desplegable -->
+    <div class="menu-container">
+        <!-- Icono de hamburguesa -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            &#9776; <!-- Este es el símbolo de 3 líneas -->
+        </div>
+        <img src="images/logo-horizontal.png" alt="logo-horizontal" class="logo-horizontal">
+        <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="user-avatar" class="user-avatar">
+
+        <!-- Overlay para oscurecer el fondo -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Menú desplegable -->
+        <nav class="menu" id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Pacientes</a></li>
+                <li><a href="#">Calendario</a></li>
+                <li><a href="#">Mensajes</a></li>
+                <li><a href="#">Informes</a></li>
+                <li><a href="#">Ajustes</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main>
+        <!-- Campo de búsqueda -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Buscar paciente por nombre..." oninput="searchPatient()">
+        </div>
+
+        <!-- Resultados de la búsqueda (vacío inicialmente) -->
+        <div class="patients-list" id="patients-list">
+            <!-- Los resultados de la búsqueda se mostrarán aquí -->
+        </div>
+        
+        <!-- Apartado de anormalidades (debajo del campo de búsqueda) -->
+        <div class="anomalies-container" id="anomalies-container">
+            <!-- Mensaje de anormalidades con imagen -->
+            <div class="anomaly" id="anomaly">
+                <img src="https://cdn-icons-png.flaticon.com/512/1768/1768400.png" alt="Precaución" class="precaution-image">
+                <p id="anomaly-text">
+                    <!-- Nombre del paciente será un enlace -->
+                    Este paciente presenta anormalidades. Es necesario realizar más pruebas. 
+                    <span id="patient-name"></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <table class="calendar">
+              <thead>
+                <tr>
+                  <th>L</th>
+                  <th>M</th>
+                  <th>M</th>
+                  <th>J</th>
+                  <th>V</th>
+                  <th>S</th>
+                  <th>D</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td>
+                </tr>
+                <tr>
+                  <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+                </tr>
+                <tr>
+                  <td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+                </tr>
+                <tr>
+                  <td>19</td><td>20</td>
+                  <td class="highlight">21</td>
+                  <td>22</td>
+                  <td class="highlight">24</td>
+                  <td>25</td><td>26</td>
+                </tr>
+                <tr>
+                  <td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="notification-center">
+            <h2>Centro de notificaciones</h2>
+            <div class="notification">
+              <p><strong>Cita con paciente</strong> - Lunes 21 de Abril<br>13:00 PM.</p>
+            </div>
+            <div class="notification">
+              <p><strong>Realizar Radiografía</strong> - Jueves 24 de Abril<br>9:00 AM.</p>
+            </div>
+          </div>
+    </main>
+    
+    <script src="medico.js"></script> <!-- Asegúrate de que el archivo JS esté enlazado -->
+</body>
+
+</html>
