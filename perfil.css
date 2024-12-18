@@ -1,0 +1,123 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-container {
+    text-align: center;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.profile-info {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.profile-info label {
+    font-size: 1em;
+    color: #555;
+}
+
+.profile-info input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #677eff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #4a64cc;
+}
+
+button:disabled {
+    background: #cccccc;
+}
+
+#saveButton {
+    background: #5cb85c;
+}
+
+#logoutButton {
+    background: #d9534f;
+    margin-top: 10px;
+}
+
+#logoutButton:hover {
+    background: #c9302c;
+}
+/* Estilos generales para los mensajes de error */
+.error-message {
+    display: none; /* Ocultamos los mensajes por defecto */
+    color: #d9534f; /* Rojo para indicar error */
+    font-size: 0.9em;
+    margin-top: 5px;
+    position: absolute;
+    background-color: #f8d7da; /* Fondo rojo claro */
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Triángulo apuntando al campo de error */
+.error-message::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Para posicionar el triángulo arriba */
+    left: 10px; /* Para que el triángulo esté centrado */
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #f8d7da;
+}
+/* Estilo para el botón "Volver a la Página del Médico" */
+#backToMedicoButton {
+    padding: 10px 20px;
+    background: #f0ad4e; /* Un color de fondo agradable */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+#backToMedicoButton:hover {
+    background: #ec971f; /* Color ligeramente más oscuro al pasar el ratón */
+}

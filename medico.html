@@ -16,7 +16,7 @@
             &#9776; <!-- Este es el símbolo de 3 líneas -->
         </div>
         <img src="images/logo-horizontal.png" alt="logo-horizontal" class="logo-horizontal">
-        <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="user-avatar" class="user-avatar">
+        <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="user-avatar" class="user-avatar" id="userAvatar">
 
         <!-- Overlay para oscurecer el fondo -->
         <div class="overlay" id="overlay"></div>
@@ -24,27 +24,28 @@
         <!-- Menú desplegable -->
         <nav class="menu" id="menu">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Pacientes</a></li>
+                <li id="homeLink"><a href="#">Inicio</a></li>
+                <li id="patientsLink"><a href="pacientes.html">Pacientes</a></li> <!-- Redirige a la página de pacientes -->
                 <li><a href="#">Calendario</a></li>
                 <li><a href="#">Mensajes</a></li>
                 <li><a href="#">Informes</a></li>
                 <li><a href="#">Ajustes</a></li>
+                <li><button id="close-menu" class="close-menu">Cerrar Menú</button></li>
             </ul>
         </nav>
     </div>
-    
+
     <main>
         <!-- Campo de búsqueda -->
         <div class="search-container">
             <input type="text" id="search" placeholder="Buscar paciente por nombre..." oninput="searchPatient()">
         </div>
 
-        <!-- Resultados de la búsqueda (vacío inicialmente) -->
-        <div class="patients-list" id="patients-list">
+        <!-- Resultados de la búsqueda -->
+        <div class="patients-list" id="patients-list" style="display: none;">
             <!-- Los resultados de la búsqueda se mostrarán aquí -->
         </div>
-        
+
         <!-- Apartado de anormalidades (debajo del campo de búsqueda) -->
         <div class="anomalies-container" id="anomalies-container">
             <!-- Mensaje de anormalidades con imagen -->
@@ -93,9 +94,9 @@
                 </tr>
               </tbody>
             </table>
-          </div>
+        </div>
 
-          <div class="notification-center">
+        <div class="notification-center">
             <h2>Centro de notificaciones</h2>
             <div class="notification">
               <p><strong>Cita con paciente</strong> - Lunes 21 de Abril<br>13:00 PM.</p>
@@ -103,7 +104,7 @@
             <div class="notification">
               <p><strong>Realizar Radiografía</strong> - Jueves 24 de Abril<br>9:00 AM.</p>
             </div>
-          </div>
+        </div>
     </main>
     
     <script src="medico.js"></script> <!-- Asegúrate de que el archivo JS esté enlazado -->

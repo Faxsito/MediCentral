@@ -9,7 +9,7 @@
 <body>
     <section class="container">
         <!-- Inicio de Sesión -->
-        <div class="user signinBx" id="signinBx">
+        <div class="user signinBx active" id="signinBx">
             <div class="imgBx">
                 <img src="https://i.pinimg.com/736x/98/bc/aa/98bcaa491c9201faae13be23c3fa937b.jpg" alt="Imagen">
             </div>
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Registro -->
-        <div class="user signupBx" id="signupBx" style="display: none;">
+        <div class="user signupBx inactive" id="signupBx">
             <div class="formBx">
                 <form id="registerForm">
                     <h2>Registrarse</h2>
@@ -33,7 +33,9 @@
                     <input type="email" id="registerEmail" placeholder="Correo Electrónico" required>
                     <input type="password" id="registerPass" placeholder="Contraseña" required>
                     <input type="submit" value="Registrarse">
+                    <p class="validation-message" id="emailValidation"></p>
                     <p>¿Ya tienes cuenta? <a href="#" id="showLogin">Iniciar Sesión</a></p>
+                    
                 </form>
             </div>
             <div class="imgBx">
@@ -41,6 +43,15 @@
             </div>
         </div>
     </section>
+
+    <!-- Ventana emergente personalizada -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

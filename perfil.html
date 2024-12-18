@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Usuario</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Avatar del usuario -->
+        <img src="https://cdn-icons-png.flaticon.com/512/6596/6596121.png" alt="Avatar" class="profile-avatar">
+
+        <!-- Mostrar nombre de usuario -->
+        <h1 id="profileName">Nombre del Usuario</h1>
+
+        <div class="profile-info">
+            <label for="profileEmail">Correo Electrónico:</label>
+            <input type="email" id="profileEmail" value="" disabled>
+            <div class="error-message" id="emailError">Correo electrónico inválido</div>
+        </div>
+        
+        <div class="profile-info">
+            <label for="profileDomicilio">Domicilio:</label>
+            <input type="text" id="profileDomicilio" value="" disabled>
+            <div class="error-message" id="domicilioError">El domicilio solo debe contener letras y espacios</div>
+        </div>
+        
+        <div class="profile-info">
+            <label for="profileRut">RUT:</label>
+            <input type="text" id="profileRut" value="" disabled>
+            <div class="error-message" id="rutError">RUT inválido. Debe tener el formato 12.345.678-9</div>
+        </div>
+        
+            
+
+        <!-- Botones -->
+        <button id="editButton">Editar Información</button>
+        <button id="saveButton" style="display:none;">Guardar Cambios</button>
+        <button id="logoutButton">Cerrar Sesión</button>
+        <!-- Botón para regresar a la página del médico -->
+        <button id="backToMedicoButton">Volver</button>
+    </div>
+    
+
+    <script src="perfil.js"></script>
+</body>
+</html>
